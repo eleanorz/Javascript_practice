@@ -1,18 +1,15 @@
 <!-- It's important that you get familiar with using Javascript arrays and objects as well as if/else statements and for loops. After all, understanding how to use these components are about 90% of what builds most of the javascript apps. The basic assignments are to help you master some of these basic concepts.
 
-Please create index.html and include <script> tag to work on the following exercises. Work on all of the following exercises in index.html and submit your codes below.
 
-Create a program that goes through each value in array x, where x is [3,5,'Dojo', 'rocks', {name: 'Michael', title: 'Sensei'}]. Have it display each value of the array as well as the type of each value. For example, it should say or log "3: 'number', 5: 'number', 'rocks': 'string', ...".
 Add a new value in the array x using a push method. New value you should add is 100.
 Add a new array as the last member of the array then log x in the console and analyze how x looks.
-Create a simple for loop that sums all the numbers between 1 to 500. Have console log the final sum.
 Create another simple for loop that sums all the numbers between 1 to 1 million. Now, we want you to figure out how long in milliseconds this operation takes. Study http://www.w3schools.com/jsref/jsref_gettime.asp to learn more about how you can get the time in milliseconds. You can basically get the time of the operation by getting this timestamp before you start the for loop and getting another timestamp after the for loop is over. By subtracting the two timestamps, you can obtain how long this operation took. -->
 
 <!DOCTYPE HTML>
 
 <html>
 	<head>
-		<title></title>
+		<title>Gaussian numbers</title>
 	</head>
 	<body>
 
@@ -20,6 +17,51 @@ Create another simple for loop that sums all the numbers between 1 to 1 million.
 			var x = [3, 5,'Dojo', 'rocks', {name: 'Michael', title: 'Sensei'}];
 
 			console.log(x);
+
+			x.push(100);
+
+			console.log('second try, adding in 100 now'+x);
+			// Create a simple for loop that sums all the numbers between 1 to 500. Have console log the final sum.
+
+			var a = 0;
+			var b = 0;
+			var c = (500+1)*(500/2);
+
+			for (var i = 10; i >= 0; i--)
+			{
+				b = b+i;
+			};
+
+			//should be 11*5 = 
+			// 10+1
+			// 9+2
+			// 8+3
+			// 7+4
+			// 6+5
+			// =55
+
+			//(N+1)*(N/2)
+
+
+
+			for (var i = 500; i >= 0; i--)
+			{
+				a = a+i;
+			};
+
+			console.log(a + ' is the sum of numbers one to five hundred');
+			console.log(b+' is the sum of numbers one to ten');
+			console.log(c + ' should be the gaussian formula for 500');
+
+			// Create a program that goes through each value in array x, where x is [3,5,'Dojo', 'rocks', {name: 'Michael', title: 'Sensei'}]. Have it display each value of the array as well as the type of each value. For example, it should say or log "3: 'number', 5: 'number', 'rocks': 'string', ...".
+
+			console.log('below is a printout of x array and type of each element');
+
+			for (var i=0 ; i >=x.length - 1; i++) {
+				console.log(x[i]+' type is: '+typeof(x[i]));
+			};
+
+
 
 		</script>
 
