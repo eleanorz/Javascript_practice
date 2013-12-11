@@ -1,15 +1,12 @@
-<!-- It's important that you get familiar with using Javascript arrays and objects as well as if/else statements and for loops. After all, understanding how to use these components are about 90% of what builds most of the javascript apps. The basic assignments are to help you master some of these basic concepts.
+<!-- It's important that you get familiar with using Javascript arrays and objects as well as if/else statements and for loops. After all, understanding how to use these components are about 90% of what builds most of the javascript apps. The basic assignments are to help you master some of these basic concepts.-->
 
-
-Add a new value in the array x using a push method. New value you should add is 100.
-Add a new array as the last member of the array then log x in the console and analyze how x looks.
-Create another simple for loop that sums all the numbers between 1 to 1 million. Now, we want you to figure out how long in milliseconds this operation takes. Study http://www.w3schools.com/jsref/jsref_gettime.asp to learn more about how you can get the time in milliseconds. You can basically get the time of the operation by getting this timestamp before you start the for loop and getting another timestamp after the for loop is over. By subtracting the two timestamps, you can obtain how long this operation took. -->
 
 <!DOCTYPE HTML>
 
 <html>
 	<head>
 		<title>Gaussian numbers</title>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
 	</head>
 	<body>
 
@@ -57,10 +54,32 @@ Create another simple for loop that sums all the numbers between 1 to 1 million.
 
 			console.log('below is a printout of x array and type of each element');
 
-			for (var i=0 ; i >=x.length - 1; i++) {
+			for (var i=0 ; i >=x.length - 1; i++)
+			{
 				console.log(x[i]+' type is: '+typeof(x[i]));
 			};
 
+			// Create another simple for loop that sums all the numbers between 1 to 1 million. Now, we want you to figure out how long in milliseconds this operation takes. Study http://www.w3schools.com/jsref/jsref_gettime.asp to learn more about how you can get the time in milliseconds. You can basically get the time of the operation by getting this timestamp before you start the for loop and getting another timestamp after the for loop is over. By subtracting the two timestamps, you can obtain how long this operation took. 
+
+			var d = 0;
+
+			var t1 = new Date();
+			var t2 = t1.getTime();
+
+			for (var i = 1000000 ; i >= 0; i--)
+			{
+				d = d+i;
+			};
+
+			var b = (1000000+1)*(1000000/2);
+
+
+			var t3 = new Date();
+			var t4 = t3.getTime();
+
+			var t5 = t4 - t2;
+
+			console.log(t5 + ' number of milliseconds taken to calculate that '+d+' is the sum of numbers below a million, ' + ' which should be equal to '+b);
 
 
 		</script>
