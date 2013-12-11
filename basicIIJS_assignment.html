@@ -1,0 +1,38 @@
+<!-- Create a javascript object called person with the following properties/methods
+name - set this as 'Trey' or your own name
+distance_travelled - set this initially as zero
+say_name - should alert the object's name
+say_something - have it accept a parameter. It should then say for example "Trey says 'I am cool'" if you pass 'I am cool' as an argument to this method.
+walk - have it alert for example "Trey is walking" and increase distance_travelled by 3
+run - have it alert for example "Trey is running" and increase distance_travelled by 10
+crawl - have it alert for example "Trey is crawling" and increase distance_travelled by 1 -->
+
+<html>
+<head>
+	<title>basic 2 JS</title>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+
+</head>
+<body>
+
+	<script>
+		var person = {};
+
+		person = {
+			name: 'Eleanor',
+			distance_travelled: 0,
+			say_name: function(){
+				alert(this.name);
+			},
+			say_something: function(s){
+				alert(s);
+			}
+
+		}
+
+		person.say_name();
+		person.say_something('hi');
+	</script>
+
+</body>
+</html>
