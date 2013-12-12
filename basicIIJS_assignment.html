@@ -26,12 +26,33 @@ crawl - have it alert for example "Trey is crawling" and increase distance_trave
 			},
 			say_something: function(s){
 				alert(s);
+			},
+			walk: function(){
+				alert('I am walking');
+				this.distance_travelled += 3;
+			},
+			run: function(){
+				alert('I am running');
+				this.distance_travelled += 10;
+			},
+			crawl: function(){
+				alert('I am crawling');
+				this.distance_travelled += 1;
+			},
+			give_distance: function(){
+				console.log(this.distance_travelled);
 			}
 
 		}
 
 		person.say_name();
 		person.say_something('hi');
+		person.run();
+		person.walk();
+		person.crawl();
+		person.give_distance();
+		console.log(person.distance_travelled);
+
 	</script>
 
 </body>
